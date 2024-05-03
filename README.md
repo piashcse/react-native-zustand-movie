@@ -28,7 +28,7 @@ Movie App using [The Movie DB](https://www.themoviedb.org) and build with react-
 
 ## How to run
 
-- `git clone git@github.com:piashcse/react-native-movie.git`
+- `git clone git@github.com:piashcse/react-native-zustand-movie.git`
 - `yarn install`
 
 Now, you can choose a command to run the project:
