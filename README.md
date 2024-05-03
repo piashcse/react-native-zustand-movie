@@ -17,7 +17,9 @@ Movie App using [The Movie DB](https://www.themoviedb.org) and build with react-
 
 ## Built With 🛠
 - [React-Native](https://reactnative.dev/) - React Native brings React's declarative UI framework to iOS and Android. With React Native, you use native UI controls and have full access to the native platform.
+- [Zustand](https://github.com/pmndrs/zustand) - A small, fast and scalable bearbones state-management solution using simplified flux principles. Has a comfy API based on hooks, isn't boilerplatey or opinionated.
 - [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
+- [React-Navigation 6](https://reactnavigation.org/) - Routing and navigation for your React Native apps.
 
 ## Requirements
 
