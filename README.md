@@ -13,7 +13,7 @@ Movie App using [The Movie DB](https://www.themoviedb.org) and build with react-
 
 ## Architecture
 - Zustand-based Architecture
-- Hooks
+- React Hooks
 
 ## Built With 🛠
 - [React-Native](https://reactnative.dev/) - React Native brings React's declarative UI framework to iOS and Android. With React Native, you use native UI controls and have full access to the native platform.
