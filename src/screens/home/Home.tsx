@@ -4,21 +4,23 @@ import {View} from 'react-native';
 import styles from './HomeStyle';
 
 import {useGetMovies} from '../../networks/Api.ts';
-import type {NavigationProp} from '@react-navigation/native';
+import type {NativeStackScreenProps} from '@react-navigation/native-stack';
+import Loading from '../../components/loading/Loading.tsx';
 
-const Home = (navigation: NavigationProp<any>) => {
+const Home = ({navigation}: NativeStackScreenProps<any>) => {
   const movies = useGetMovies(state => state.data?.results);
+  const loading = useGetMovies(state => state.loading);
   useEffect(() => {
     useGetMovies.getState().execute();
   }, []);
-  return (
+  return loading ? (
+    <Loading />
+  ) : (
     <View style={styles.mainView}>
       <MovieList
         movies={movies}
         loadMoreData={() => {}}
-        onPress={() => {
-          navigation.navigate('MovieDetail');
-        }}
+        onPress={item => navigation.navigate('movieDetail', {movieId: item.id})}
       />
     </View>
   );

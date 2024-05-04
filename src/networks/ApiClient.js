@@ -1,5 +1,5 @@
 import {create} from 'zustand';
-import axios, { AxiosRequestConfig,  } from "axios";
+import axios from 'axios';
 
 const initialState = {
   loading: false,
@@ -8,7 +8,7 @@ const initialState = {
   data: null,
   errorData: null,
 };
-export const request = ({method, url}, options) =>
+export const request = ({method, url, initialParam = {}}, options) =>
   create((set, get) => ({
     ...initialState,
 
@@ -24,7 +24,10 @@ export const request = ({method, url}, options) =>
         method,
         url: url + (id || ''),
         data,
-        params,
+        params: {
+          ...initialParam,
+          params,
+        },
       })
         .then(res => {
           set({...initialState, success: true, data: res.data});

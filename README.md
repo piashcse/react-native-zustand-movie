@@ -9,6 +9,7 @@ Movie App using [The Movie DB](https://www.themoviedb.org) and build with react-
 
 # Main Features
 - Movie List
+- Movie detail
 
 
 ## Architecture
